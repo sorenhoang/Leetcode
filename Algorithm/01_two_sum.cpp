@@ -1,13 +1,20 @@
-// Program to print text on the console.
-// cout -> console output.
+class Solution {
+private:
+    map<int, int> M;
+public:
+    // complexity : O(nlogn)
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> result;
 
-#include <iostream>
+        for (int i = 0; i < nums.size(); ++i) {
+            if (M[target - nums[i]] != 0) {
+                result.push_back(M[target - nums[i]] - 1);
+                result.push_back(i);
+                return result;
+            }
+            M[nums[i]] = i + 1;
+        }
 
-using namespace std;
-
-int main()
-{
-    cout << "Hello, World!" << endl;
-    system("pause");
-    return 0;
-}
+        return result;
+    }
+};
