@@ -7,4 +7,4 @@ if __name__ == "__main__":
     # init
     sol = Solution()
     # act
-    sol.log()
+    print(sol.log())
