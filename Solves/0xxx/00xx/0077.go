@@ -1,13 +1,34 @@
-package main
+package l77
 
-import "fmt"
+// Leetcode 77: Combinations
 
-// SampleFunction is a simple example function
+import (
+	"fmt"
+)
+
 func combine(n int, k int) [][]int {
-	return n
+	var res [][]int
+	var path []int
+	var dfs func(start int)
+	dfs = func(start int) {
+		if len(path) == k {
+			tmp := make([]int, k)
+			copy(tmp, path)
+			res = append(res, tmp)
+			return
+		}
+		for i := start; i <= n; i++ {
+			path = append(path, i)
+			dfs(i + 1)
+			path = path[:len(path)-1]
+		}
+	}
+	dfs(1)
+	return res
 }
 
 func main() {
-	result := combine(3, 4)
-	fmt.Println("Result:", result)
+	n, k := 4, 2
+	result := combine(n, k)
+	fmt.Println(result)
 }
