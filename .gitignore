@@ -1,0 +1,55 @@
+# C++ compiled files
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# C++ debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# C++ precompiled headers
+*.gch
+*.pch
+
+# Go compiled files
+*.test
+*.prof
+
+# Go build output
+/bin/
+/pkg/
+*.exe~
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
+ehthumbs.db
+
+# Dependency directories
+vendor/
+
+# Test coverage
+*.cover
+*.coverprofile
+coverage.txt
+coverage.html
+
+# Build directories
+build/
+dist/
+out/
