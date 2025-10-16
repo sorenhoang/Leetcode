@@ -14,7 +14,8 @@
         "regex": "cpp",
         "valarray": "cpp",
         "cmath": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "ratio": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
