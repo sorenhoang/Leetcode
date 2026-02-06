@@ -15,8 +15,7 @@ public:
         {
             while (nxt < n && 1ll * nums[i] * k >= 1ll * nums[nxt])
                 nxt++;
-            cout << i
-                    ans = min(ans, n - nxt + i);
+            ans = min(ans, n - nxt + i);
         }
         return ans;
     }
