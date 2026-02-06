@@ -23,10 +23,14 @@ public:
         int r = 1;
         for (int i = 1; i <= n; ++i)
         {
-            int c = s[i] - 'A';
             while (r <= n)
             {
-                int diff = (r - i + 1) - (countChar[r][c] - countChar[i - 1][c]);
+                int diff = r - i + 1;
+                for (int c = 0; c < 26; ++c)
+                {
+                    int x = r - i + 1 - (countChar[r][c] - countChar[i - 1][c]);
+                    diff = min(diff, x);
+                }
                 if (diff <= k)
                     r++;
                 else
